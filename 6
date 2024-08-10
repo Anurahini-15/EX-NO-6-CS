@@ -1,0 +1,21 @@
+
+data_nd = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]], [[9, 10], [11, 12]]])
+agg_functions = ['mean', 'median', 'std', 'min', 'max', 'sum']
+agg_results_axis0 = {}
+for func in agg_functions:
+    if func == 'mean':
+        agg_results_axis0[func] = np.mean(data_nd, axis=0)
+    elif func == 'median':
+        agg_results_axis0[func] = np.median(data_nd, axis=0)
+    elif func == 'std':
+        agg_results_axis0[func] = np.std(data_nd, axis=0)
+    elif func == 'min':
+        agg_results_axis0[func] = np.min(data_nd, axis=0)
+    elif func == 'max':
+        agg_results_axis0[func] = np.max(data_nd, axis=0)
+    elif func == 'sum':
+        agg_results_axis0[func] = np.sum(data_nd, axis=0)
+
+print("Aggregation Results for n-D Data along axis=0:")
+print(agg_results_axis0)
+
